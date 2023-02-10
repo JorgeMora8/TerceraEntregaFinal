@@ -15,4 +15,10 @@
         {{form.as_p}}
         <input type="submit" value="save">
     </form>
+
+
+{% for review in reviews %}
+    <h1>{{review.name}}</h1>
+    <h2>{{review.text}}</h2>
+{% endfor %}
 {% endblock content%}

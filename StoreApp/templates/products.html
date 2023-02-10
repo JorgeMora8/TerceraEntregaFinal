@@ -8,10 +8,23 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat exercitationem repudiandae temporibus cumque dicta impedit voluptates doloribus necessitatibus, rem quasi!</p>
     </div>
 
+    {% for product in products %}
+    <h1>{{product.name}}</h1>
+    <b>{{product.price}}</b>
+
+    {% endfor%}
+
     <form action="" method="POST">
     {% csrf_token %}
     {{form.as_p}}
     <input type="submit" value="save">
     </form>
+
+    <form action="" method="GET">
+        <input type="text">
+        <input type="submit" value="save">
+        </form>
+
+    
 </div>
 {% endblock content%}
