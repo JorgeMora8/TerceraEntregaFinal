@@ -52,7 +52,11 @@
 <div class="formContainer">
     <div class="formTextContainer"></div>
     <div class="formArea">
-
+      <form action="" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">save</button>
+  </form>
 </div>
 </div>
 
