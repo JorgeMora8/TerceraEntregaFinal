@@ -1,0 +1,99 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 { 
+    color: green;
+}
+
+.storeInitContainer{ 
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: aquamarine;
+}
+
+.storeTextContainer { 
+    width: 35rem; 
+    height: auto;
+    background-color: azure;
+    margin: 15px;
+}
+
+.storeImageContainer{ 
+    width: 30rem;
+    height: 30rem;
+    background-color: brown;
+    margin: 15px;
+}
+
+.infoContainer{ 
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5rem 0px;
+}
+
+.boxAccordion{ 
+    width: 40%;
+    height: auto; 
+    margin: 0px 30px;
+
+}
+
+.infoTextContainer{ 
+    width: 30rem;
+    height: 10rem;
+    background-color: blue;
+    margin: 0px 30px;
+
+}
+
+.formContainer{ 
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: aquamarine;
+    padding: 50px 0px;
+}
+
+.formArea{ 
+    width: 30%;
+    height: auto;
+    margin: 0px 20px;
+}
+
+.formTextContainer{ 
+    width: 30rem;
+    margin: 0px 20px;
+    height: 15rem;
+    background-color: yellowgreen;
+}
+
+.footerContainer{ 
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: violet;
+    padding: 20px;
+}
+
+.footerItem{ 
+    width: 10rem;
+    height: 10rem;
+    background-color: tomato;
+}
