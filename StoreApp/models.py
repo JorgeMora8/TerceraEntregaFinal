@@ -1,15 +1,6 @@
 from django.db import models
 
-# Create your models here.
-class Product(models.Model): 
-    name = models.CharField(max_length=40)
-    price = models.IntegerField()
-    on_sale = models.BooleanField(default=True)
-    inventory = models.IntegerField()
-    added = models.DateTimeField(auto_now_add=True, null=True)
 
-    def __str__(self): 
-        return self.name
 
 class User(models.Model): 
     name = models.CharField(max_length=40)
@@ -27,3 +18,21 @@ class Review(models.Model):
     def __str__(self): 
         return f"{self.name} {self.text[0:20]}..."
 
+
+class type_of_product(models.Model): 
+    type = models.CharField(max_length=20)
+
+    def __str__(self): 
+        return f"{self.type}"
+
+
+# Create your models here.
+class Product(models.Model): 
+    name = models.CharField(max_length=40)
+    price = models.IntegerField()
+    on_sale = models.BooleanField(default=True)
+    inventory = models.IntegerField()
+    added = models.DateTimeField(auto_now_add=True, null=True)
+    type =  models.ForeignKey(type_of_product, null=True, on_delete=models.CASCADE)
+    def __str__(self): 
+        return self.name

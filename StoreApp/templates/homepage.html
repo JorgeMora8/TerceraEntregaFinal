@@ -4,21 +4,25 @@
 {% block content%}
 <div class="storeInitContainer">
     <div class="storeTextContainer">
-        <h1>Lorem ipsum dolor sit.</h1>
+        <h1>Technology-Store</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat exercitationem repudiandae temporibus cumque dicta impedit voluptates doloribus necessitatibus, rem quasi!</p>
     </div>
-    <div class="storeImageContainer"></div>
+    <div class="storeImageContainer">
+    </div>
 </div>
 
 
 <div class="infoContainer">
-    <div class="infoTextContainer"></div>
+    <div class="infoTextContainer">
+      <h2>Disfruta de un gran servicio</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae architecto, facere optio praesentium tempore error.</p>
+    </div>
     <div class="boxAccordion">
     <div class="accordion accordion-flush" id="accordionFlushExample">
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingOne">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-              Accordion Item #1
+              Diferentes marcas de tecnologia
             </button>
           </h2>
           <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
@@ -28,7 +32,7 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingTwo">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-              Accordion Item #2
+              Variedad de precios
             </button>
           </h2>
           <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
@@ -38,7 +42,7 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingThree">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-              Accordion Item #3
+              Descuentos semanales
             </button>
           </h2>
           <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
@@ -49,20 +53,41 @@
     </div>
 </div>
 
-<div class="formContainer">
-    <div class="formTextContainer"></div>
-    <div class="formArea">
-      <form action="" method="POST">
-    {% csrf_token %}
-    {{form.as_p}}
-    <button type="submit">save</button>
-  </form>
+<div class="fraseContainer">
+  <div>
+  <b>Se parte de nuestra familia</b>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto maxime harum magnam ab inventore.</p>
+</div>
+<i class="fa-solid fa-users fa-5x" style="color: #fff;"></i>
+</div>
+
+<div class="formAddProduct">
+  <div class="productFormArea">
+    <b>Registrate</b>
+<form action="" method="POST" class="formProduct">
+{% csrf_token %}
+{{form.as_p}}
+<input type="submit" value="save">
+</form>
 </div>
 </div>
 
-{% for user in users %}
-  <h1>{{user.name}}</h1>
-  <h2>{{user.email}}</h2>
-{% endfor %}
+<div class="listContainer">
+  <div class="productItemContainer">
+  <ol class="list-group list-group-numbered">
+    <h4 class="tituloUserRegister"><span><i class="fa-solid fa-user-plus"></i></span> Ultimos usuarios registrados</h4>
+    {% for user in users %}
+      <li class="list-group-item d-flex justify-content-between align-items-start listItem">
+        <div class="ms-2 me-auto">
+          Name: {{user.name}}
+        </div>
+        <span class="badge bg-dark rounded-pill">LastName: {{user.lastName}}</span>
+        <span class="badge bg-dark rounded-pill">Proffesion: {{user.proffesion}}</span>
+        <span class="badge bg-primary rounded-pill">Email: {{user.email}}</span>
+      </li>
+      {% endfor %}
+    </ol>
+    </div>
+</div>
 
 {% endblock content%}

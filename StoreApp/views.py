@@ -5,7 +5,7 @@ from django.http import HttpResponse
 from .forms.userForm import UserForm
 from .forms.reviewForm import ReviewForm
 from .forms.productForm import ProductForm
-from .models import Product, Review, User
+from .models import Product, Review, User, type_of_product
 
 # Create your views here.
 #Another message
@@ -22,9 +22,14 @@ def homepage(request):
     return render (request,'homepage.html', context)
 
 def products(request): 
+    q = request.GET.get('q')
+    productTypeList = type_of_product.objects.all()
 
+    if q == None: 
+            productList = Product.objects.all()
+    else: 
+        productList = Product.objects.filter(type__type=q)
     
-    productList = Product.objects.all()
     form = ProductForm()
     if request.method == 'POST': 
         form = ProductForm(request.POST)
@@ -35,11 +40,21 @@ def products(request):
     if request.method == 'GET': 
         print(request.GET)
 
-    context = {"form": form, "products": productList}
+    context = {"form": form, "products": productList, "type_list":productTypeList}
     return render (request, 'products.html', context)
 
 def reviews(request): 
-    reviewList = Review.objects.all()
+    q = request.GET.get("q")
+
+    if q == None:
+        reviewList = Review.objects.all()
+    else: 
+        reviewList = Review.objects.filter(name__name = q)
+        if reviewList.__len__() == 0:
+            reviewList = None
+
+    users= User.objects.all()
+    
     form = ReviewForm()
     if request.method == "POST": 
         form = ReviewForm(request.POST)
@@ -47,5 +62,6 @@ def reviews(request):
             form.save()
             redirect('store')
 
-    context = {"form": form, "reviews": reviewList}
+
+    context = {"form": form, "reviews": reviewList, "users": users}
     return render(request, 'reviews.html', context)

@@ -1,7 +1,15 @@
 <footer>
     <div class="footerContainer">
-        <div class="footerItem footerLogoContainer"></div>
-        <div class="footerItem footerNavContainer"></div>
-        <div class="footerItem footerContactContainer"></div>
+        <div class="footerItem footerLogoContainer">
+            <b class="logoFooter">Technology</b>
+        </div>
+        <div class="footerItem footerNavContainer">
+            <b class="navTitle">Navegation</b>
+            <ul class="navList">
+                <li> <a class="dropdown-item" href="{% url 'store'%}">Store</a></li>
+                <li> <a class="dropdown-item" href="{% url 'products' %}">Products</a></li>
+                <li><a class="dropdown-item" href="{% url 'review' %}">reviews</a></li>
+            </ul>
+        </div>
     </div>
 </footer>

@@ -2,27 +2,46 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "poppins", sans-serif;
 }
 
 h1 { 
     color: green;
 }
 
-.storeInitContainer{ 
+.storeInitContainer {
     width: 100%;
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-color: aquamarine;
+    background-color: #f0eeff;
+    padding: 30px;
 }
 
 .storeTextContainer { 
     width: 35rem; 
     height: auto;
-    background-color: azure;
     margin: 15px;
+}
+
+.storeTextContainer h1 {
+    font-family: "poppins";
+    font-weight: 600;
+    color: #1e1e1e;
+}
+
+.storeTextContainer p {
+    color: #1e1e1e;
+}
+
+.storeTextContainer span{ 
+    color: #1e1e1e;
+}
+
+.storeTextContainer p { 
+    font-weight: 400;
 }
 
 .storeImageContainer{ 
@@ -52,9 +71,9 @@ h1 {
 .infoTextContainer{ 
     width: 30rem;
     height: 10rem;
-    background-color: blue;
+    background-color: rgb(255, 255, 255);
     margin: 0px 30px;
-
+    font-weight: 300;
 }
 
 .formContainer{ 
@@ -81,19 +100,259 @@ h1 {
     background-color: yellowgreen;
 }
 
-.footerContainer{ 
+.footerContainer {
     width: 100%;
     height: auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    background-color: violet;
+    background-color: #03001c;
     padding: 20px;
 }
 
 .footerItem{ 
     width: 10rem;
-    height: 10rem;
-    background-color: tomato;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logoFooter{ 
+    color: #fff;
+    font-weight: 600;
+}
+
+
+.navProductTypeContainer{ 
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navProductType {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 1rem;
+}
+
+.productTypeLink{ 
+    text-decoration: none;
+    margin: 0px 10px;
+    font-weight: 600;
+    color: #fff;
+    transition: 0.2s ease;
+}
+
+.productTypeLink:hover { 
+    color: #f1025e;;
+}
+
+.listContainer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #f0eeff;
+    padding: 50px 0px;
+}
+
+.productItemContainer { 
+    width: 60%;
+    height: auto;
+}
+
+.listItem{ 
+    margin: 5px 0px;
+}
+
+.formAddProduct {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0px;
+    margin: 0px 0px 50px 0px;
+}
+
+.productFormArea{ 
+    width: 30rem;
+    height: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 1.5rem;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.badge{ 
+    margin: 0px 10px;
+}
+
+.btnAddProductItem{ 
+    background-color: rgb(255, 0, 85);
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    border: 1.5px solid rgb(125, 1, 42);
+    border-radius: 1rem;
+    transition: 0.2s ease;
+}
+
+.btnAddProductItem:hover { 
+    background-color: rgb(191, 22, 79);
+}
+
+.reviewListContainer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 50px 0px;
+}
+
+.reviewListContainer div { 
+    width: 30rem;
+    height: auto;
+}
+
+.logoFooter{ 
+    font-weight: 700;
+    font-size: 1.7rem;
+}
+
+.navTitle{ 
+    font-weight: 700;
+    font-size: 1.7rem;
+    color: #fff;
+}
+
+.navList{ 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navList li a{ 
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+.textFormReview{ 
+    width: 20rem;
+    height: auto;
+}
+
+.fraseContainer{ 
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(119, 50, 204);
+    padding: 50px 0px;
+}
+
+.fraseContainer div { 
+    width: 20rem;
+    height: auto;
+}
+
+
+
+.fraseContainer { 
+    font-weight: 500;
+    color: #fff;
+}
+
+.tituloUserRegister{ 
+    font-weight: 600;
+    color: #1d2f49;
+}
+
+.tituloUserRegister span { 
+    color: #f1025e;
+}
+
+.infoTextContainer h2 { 
+    font-weight: 600;
+    color: #1d2f49;
+}
+
+.reviewUserNav{ 
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.navReviwFilterContainer{ 
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navReview{ 
+    width:25rem;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.navReview h3 { 
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.navReview ul{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navReview ul li { 
+    list-style: none;
+    margin: 5px 10px;
+}
+.navReview ul li a { 
+    text-decoration: none;
+    color: #f1025e;
+    font-size: 1.2rem;
+    font-weight: 500; 
+    transition: 0.2s ease;
+}
+
+.navReview ul li a:hover { 
+    color: #97003a;
+}
+
+.noRegisterMessage{ 
+    font-size: 1.5rem;
+    color: #97003a;
 }
